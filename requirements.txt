@@ -1,4 +1,4 @@
-Bottleneck==1.3.2
+Bottleneck
 certifi==2021.10.8
 click==8.0.3
 colorama==0.4.4
