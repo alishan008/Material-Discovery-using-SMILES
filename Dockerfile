@@ -4,7 +4,8 @@ WORKDIR /app
 
 ADD . /app/
 
-RUN pip install --no-cache-dir -r  /app/requirements.txt
+RUN python -m pip install --upgrade pip
+RUN pip3 install --no-cache-dir -r  /app/requirements.txt
 
 EXPOSE 5000
 
