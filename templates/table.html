@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SMILES Adjudicator</title>
+	<!-- Main Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}" />
+	<!-- Bootstrap -->
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+									
+  	<!-- google Font  -->
+  			<!-- Poppins-->
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  		<!-- Oswald -->
+  	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+  	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/6ff322857f.js" crossorigin="anonymous"></script>
+</head>
+<body style="width: 90%; margin: auto;">
+
+<section id="page-title">
+  <div class="container">
+      <h1>SMILES Adjudicator</h1>
+  </div>
+</section>
+
+<div class="dataframe">
+    <table style="width: 100%;">
+		<th>SMILES</th>
+		<th>Adjudication</th>
+		{% for c, a in result.items() %}
+		<tr>
+		  <td>{{ c }}</td>
+		  <td>{{ a }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+  </div>
+  <br/>
+  <a class="btn btn-info" style="margin-left: 40%;" href="/home" role="button">Return to homepage</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
