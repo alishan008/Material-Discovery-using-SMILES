@@ -4,6 +4,8 @@ WORKDIR /app
 
 ADD . /app
 
+RUN apk add build-base libffi-dev openssl-dev --no-cache
+
 RUN pip install requirements.txt
 
 EXPOSE 5000
