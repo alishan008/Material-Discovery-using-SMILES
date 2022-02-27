@@ -10,11 +10,15 @@ WORKDIR /app
 
 ADD . /app/
 
-
+RUN wget \
+    https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    && mkdir /root/.conda \
+    && bash Miniconda3-latest-Linux-x86_64.sh -b \
+    && rm -f Miniconda3-latest-Linux-x86_64.sh 
 
 RUN python -m pip install --upgrade pip
-RUN conda install -c rdkit rdkit -y
 RUN pip3 install --no-cache-dir -r  /app/requirements.txt
+RUN conda install -c rdkit rdkit -y
 
 EXPOSE 5000
 
