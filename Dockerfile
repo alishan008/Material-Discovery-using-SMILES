@@ -16,14 +16,12 @@ RUN wget \
     && bash Miniconda3-latest-Linux-x86_64.sh -b \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 
-RUN python -m pip install --upgrade pip
-RUN pip3 install Flask==2.0.2
-RUN pip3 install --no-cache-dir -r  /app/requirements.txt
 RUN conda install python=3.7
 RUN conda install -c rdkit rdkit -y
+RUN pip3 install --no-cache-dir -r  /app/requirements.txt
+RUN pip3 install Flask
+RUN pip3 install joblib
 
 EXPOSE 5000
-
-ENV NAME MatDiscovery
 
 CMD python app.py
