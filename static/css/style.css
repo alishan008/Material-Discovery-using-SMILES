@@ -182,7 +182,6 @@ h2 {
 }
 #codeEditor {
 	padding-left: calc(3.5rem + 5px);
-	margin-left: 300px;
 	width:800px;
 	/* Determine appearance of code editor */
 	background-color:#272822;
@@ -190,7 +189,6 @@ h2 {
 	color:#ffffff;
 }
 #lineCounter {
-	margin-left: 300px;
 	display: flex;
 	border-color: transparent;
 	overflow-y: hidden;
