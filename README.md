@@ -16,7 +16,7 @@ The project is a Flask app that classifies SMILES notations of polymers into ‘
 
 As our project accepts unlimited lines of input, it is important that all of them are validated and exceptions are thrown for ones that don’t.  Therefore, a line counter that indicated the line number is placed right next to the textarea element. This helps in easily identifying the entries that don’t pass the validation as can be seen below:
 
-<p align="center"><img src='https://user-images.githubusercontent.com/78029712/156015142-b2aa8236-6913-4579-95de-ba9c7bae4c9d.jpg'/></p>
+<p align="center"><img width="50%" src='https://user-images.githubusercontent.com/78029712/156015142-b2aa8236-6913-4579-95de-ba9c7bae4c9d.jpg'/></p>
 
 Once all the entries are validated, the submit button enables and all the entries are fitted on the Machine Learning model and classified into either ‘accept’ or ‘reject’. The output is presented on a HTML table.
 
