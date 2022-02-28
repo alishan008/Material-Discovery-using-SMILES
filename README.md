@@ -20,4 +20,4 @@ Once all the entries are validated, the submit button enables and all the entrie
 
 The whole project is deployed on Microsoft Azure. Azure DevOps was used to build and push the image of the GitHub repository to Azure Container Registry (ACR). Further, the web app was built by sourcing the image from ACR.
 
-![Picture1](https://user-images.githubusercontent.com/78029712/156013682-776e7bf2-d26d-426c-acf2-66fb2331ab24.jpg)
+<p align="center"><img src='https://user-images.githubusercontent.com/78029712/156013682-776e7bf2-d26d-426c-acf2-66fb2331ab24.jpg'/></p>
