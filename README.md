@@ -14,7 +14,9 @@ Our model is trained on the dataset sourced from ‘Expert in the loop IBM’. A
 
 The project is a Flask app that classifies SMILES notations of polymers into ‘accept’ or ‘reject’ for further experimental investigation that can accelerate material discovery. In this project, we accept multi line input of SMILES notations and validate the entries using a WebAssembly (WASM) file, compiled from Rust source code, and a two-way communication channel between JavaScript and Wasm. More details about how this is achieved can be found on this article written by the author. Multiple polymers can be entered in the text box with each line containing one.
 
-As our project accepts unlimited lines of input, it is important that all of them are validated and exceptions are thrown for ones that don’t.  Therefore, a line counter that indicated the line number is placed right next to the textarea element. This helps in easily identifying the entries that don’t pass the validation.
+As our project accepts unlimited lines of input, it is important that all of them are validated and exceptions are thrown for ones that don’t.  Therefore, a line counter that indicated the line number is placed right next to the textarea element. This helps in easily identifying the entries that don’t pass the validation as can be seen below:
+
+<p align="center"><img src='https://user-images.githubusercontent.com/78029712/156015142-b2aa8236-6913-4579-95de-ba9c7bae4c9d.jpg'/></p>
 
 Once all the entries are validated, the submit button enables and all the entries are fitted on the Machine Learning model and classified into either ‘accept’ or ‘reject’. The output is presented on a HTML table.
 
