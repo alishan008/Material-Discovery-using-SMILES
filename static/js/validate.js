@@ -37,12 +37,15 @@ const watch = instance => {
     }
     p.style.display = "block";
     if (lines_array.length === 0 && prob_arr.length === 0){
+      p.style.color = "#000000"
       p.innerHTML = "Enter at least 1 SMILES structure of a substance."
     } else if (prob_arr.length === 0 ){
-      p.innerHTML = "All SMILESs entered are valid. Please click on Submit.";
+      p.style.color =  "#07941f";
+      p.innerHTML = "<b>All SMILESs entered are valid. Please click on Submit.</b>";
       allow = true;
     } else{
-      p.innerHTML = "Kindly make sure that each line contains just one SMILES. <br/>Invalid SMILES at indexes: " + prob_arr;
+      p.style.color = "#f8001e";
+      p.innerHTML = "<b>Kindly make sure that each line contains just one SMILES. <br/>Invalid SMILES at indexes: " + prob_arr + ".</b>";
     }
 
     if (allow){
