@@ -12,7 +12,7 @@ Our model is trained on the dataset sourced from ‘Expert in the loop IBM’. A
 
 >*“Expert-in-the-Loop AI (EITL AI) for Polymer Discovery data set comprises of cyclic lactones that are adjudicated as suitable candidates for further experimental investigation. Experiment includes synthesis and characterization of the polymer materials. Adjudication accounts for the expert-level judgement about the practicality of the lactone synthesis (expectation of the low cost, short synthetic route, and high yield) and utilization as a monomer (no side-reactions, reasonable reactivity under polymerization conditions).”*
 
-The project is a Flask app that classifies SMILES notations of polymers into ‘accept’ or ‘reject’ for further experimental investigation that can accelerate material discovery. In this project, we accept multi line input of SMILES notations and validate the entries using a WebAssembly (WASM) file, compiled from Rust source code, and a two-way communication channel between JavaScript and Wasm. More details about how this is achieved can be found on this article written by the author. Multiple polymers can be entered in the text box with each line containing one.
+The project is a Flask app that classifies SMILES notations of polymers into ‘accept’ or ‘reject’ for further experimental investigation that can accelerate material discovery. In this project, we accept multi line input of SMILES notations and validate the entries using a WebAssembly (WASM) file, compiled from Rust source code, and a two-way communication channel between JavaScript and Wasm. More details about how this is achieved can be found on this article written by the author, link is given at the end of the document. Multiple polymers can be entered in the text box with each line containing one.
 
 As our project accepts unlimited lines of input, it is important that all of them are validated and exceptions are thrown for ones that don’t.  Therefore, a line counter that indicated the line number is placed right next to the textarea element. This helps in easily identifying the entries that don’t pass the validation as can be seen below:
 
@@ -23,3 +23,11 @@ Once all the entries are validated, the submit button enables and all the entrie
 The whole project is deployed on Microsoft Azure. Azure DevOps was used to build and push the image of the GitHub repository to Azure Container Registry (ACR). Further, the web app was built by sourcing the image from ACR.
 
 <p align="center"><img src='https://user-images.githubusercontent.com/78029712/156013682-776e7bf2-d26d-426c-acf2-66fb2331ab24.jpg'/></p>
+
+As we're dealing with SMILES strings here, this can't be treated like a regular string, and we need a special package RDKit that helps transform SMILES string into a number of values about that compound. For the purposes of this project, we derived molecular weight, the MolLogP, number of rotatable bonds, and heavy atom count of the molecule to be used for fitting the machine learning model on. 
+
+# References
+
+[1] [https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/](https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/)
+[2] [https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/](https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/)
+[3] [https://www.rdkit.org/docs/GettingStartedInPython.html](https://www.rdkit.org/docs/GettingStartedInPython.html)
