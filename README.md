@@ -26,7 +26,7 @@ The whole project is deployed on Microsoft Azure. Azure DevOps was used to build
 
 As we're dealing with SMILES strings here, this can't be treated like a regular string, and we need a special package RDKit that helps transform SMILES string into a number of values about that compound. For the purposes of this project, we derived molecular weight, the MolLogP, number of rotatable bonds, and heavy atom count of the molecule to be used for fitting the machine learning model on. 
 
-# References
+## References
 
 [1] [https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/](https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/)
 [2] [https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/](https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/)
