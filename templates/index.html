@@ -30,13 +30,13 @@
 <h2>Enter SMILES</h2>
 <section>
 <form action="{{ url_for('submit') }}" method="post">
-    <div>
+    <div style="margin: 0 20%;">
         <textarea id='lineCounter' wrap='off' readonly>1.</textarea>
         <textarea id="codeEditor" name="text" wrap='off' placeholder="Enter at least one SMILES notation to begin"></textarea>
     </div>
     <br/>
     <p id="indicator" style="text-align: center;">Enter at least 1 SMILES structure of a substance.</p>
-    <input style="margin-left: 48%;" id="subtn" type="submit" value="Submit" disabled>
+    <input style="margin: 0 47%;" id="subtn" type="submit" value="Submit" disabled>
 </form>
 </section>
 
@@ -52,7 +52,7 @@
         The following is a SMILES generation algorithm for Ciprofloxacin: 
     </blockquote>
     <br/>
-    <img width="300px" style="margin-left: 35%; border-style: dashed; border-color: darkslategray;" src="https://upload.wikimedia.org/wikipedia/commons/0/00/SMILES.png"/>
+    <img width="300px" style="margin: 0 35%; border-style: dashed; border-color: darkslategray;" src="https://upload.wikimedia.org/wikipedia/commons/0/00/SMILES.png"/>
     <br/><br/>
     <blockquote>
         The structure of Ciprofloxacin is reduced to 'C1CC1N2C=C(C(=O)C3=CC(=C(C=C32)N4CCNCC4)F)C(=O)O'.
