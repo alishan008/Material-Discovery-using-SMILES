@@ -28,6 +28,6 @@ As we're dealing with SMILES strings here, this can't be treated like a regular 
 
 ## References
 
-[1] [https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/](https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/)
-[2] [https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/](https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/)
-[3] [https://www.rdkit.org/docs/GettingStartedInPython.html](https://www.rdkit.org/docs/GettingStartedInPython.html)
+1. [https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/](https://developer.ibm.com/exchanges/data/all/expert-in-the-loop-ai-polymer-discovery/)
+2. [https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/](https://depth-first.com/articles/2020/08/24/smiles-validation-in-the-browser/)
+3. [https://www.rdkit.org/docs/GettingStartedInPython.html](https://www.rdkit.org/docs/GettingStartedInPython.html)
